@@ -36,11 +36,11 @@ end
 
 
 def full?(board)
-  not_full = board.any? do |player| 
+  not_full = board.any? do |player|
     player == nil || player == " "
   end
-  
-  not_full ? false : true
+
+  return not_full ? false : true
 end
 
 
@@ -55,5 +55,5 @@ end
 
 
 def winner(board)
-  won?(board) ? board[won?(board)[0]] : nil
+  return won?(board) ? board[won?(board)[0]] : nil
 end
