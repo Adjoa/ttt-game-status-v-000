@@ -45,6 +45,9 @@ end
 def over?(board)
   return won?(board) || draw?(board) || full?(board)
 end
+
+def winner(board)
+  
 # Test.
 # board = ["X", " ", "O", " ", "X", "O", " ", " ", "X"]
 # won?(board)
