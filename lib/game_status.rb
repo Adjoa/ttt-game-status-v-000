@@ -21,7 +21,7 @@ def won?(board)
     player = board[win_index_1]
 
     if position_taken?(board, win_index_1)
-      win_found = win_combination.all? do |win_index| 
+      win_found = win_combination.all? do |win_index|
         board[win_index] == player
       end
 
@@ -52,5 +52,5 @@ end
 
 
 def winner(board)
-  (won?(board)) ? (board[won?(board)[0]] : nil)
+  won?(board) ? board[won?(board)[0]] : nil
 end
