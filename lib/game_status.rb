@@ -39,11 +39,7 @@ end
 
 
 def draw?(board)
-  puts "#{board}"
-  won = won?(board)
-  full = full?(board)
-
- return !won && full
+  return !won?(board) && full?(board)
 end
 # Test.
 # board = ["X", " ", "O", " ", "X", "O", " ", " ", "X"]
