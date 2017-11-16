@@ -47,8 +47,7 @@ def over?(board)
 end
 
 def winner(board)
-  win_result = won?(board)
-  return win_result[0]
+  return board[won?(board)[0]]  
 end
 # Test.
 # board = ["X", " ", "O", " ", "X", "O", " ", " ", "X"]
