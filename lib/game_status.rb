@@ -36,7 +36,10 @@ end
 
 
 def full?(board)
-  not_full = board.any?{|player| player == nil || player == " "}
+  not_full = board.any? do |player| 
+    player == nil || player == " "
+  end
+  
   not_full ? false : true
 end
 
