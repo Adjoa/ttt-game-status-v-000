@@ -29,7 +29,7 @@ def won?(board)
     end
   end
 
-  return false
+  return nil
 end
 
 def full?(board)
