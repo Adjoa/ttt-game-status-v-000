@@ -21,7 +21,9 @@ def won?(board)
     player = board[win_index_1]
 
     if position_taken?(board, win_index_1)
-      win_found = win_combination.all?{|win_index| board[win_index] == player}
+      win_found = win_combination.all? do |win_index| 
+        board[win_index] == player
+      end
 
       if win_found
         return win_combination
@@ -32,6 +34,7 @@ def won?(board)
   return nil
 end
 
+
 def full?(board)
   not_full = board.any?{|player| player == nil || player == " "}
   not_full ? false : true
@@ -39,16 +42,15 @@ end
 
 
 def draw?(board)
-  return !won?(board) && full?(board)
+  return (!won?(board) && full?(board))
 end
+
 
 def over?(board)
-  return won?(board) || draw?(board) || full?(board)
+  return (won?(board) || draw?(board) || full?(board))
 end
 
+
 def winner(board)
-  won?(board) ? board[won?(board)[0]] : nil
+  (won?(board)) ? (board[won?(board)[0]] : nil)
 end
-# Test.
-# board = ["X", " ", "O", " ", "X", "O", " ", " ", "X"]
-# won?(board)
